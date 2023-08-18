@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import SearchOrder from '../order/searchOrder';
+import SearchOrder from '../order/SearchOrder';
 import Username from '../user/Username';
 
 const Header = () => {
