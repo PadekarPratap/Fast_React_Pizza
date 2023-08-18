@@ -1,8 +1,10 @@
+import moment from 'moment/moment';
+
 export const calcMinutesLeft = (date) => {
-  const pastTime = new Date(date).getTime();
-  const currentTime = new Date().getTime();
+  const now = moment();
+  const futureDate = moment(date);
 
-  const timeDifference = currentTime - pastTime;
+  const minutesLeft = futureDate.diff(now, 'minutes');
 
-  return Math.round((timeDifference / 60) * 1000);
+  return minutesLeft;
 };
